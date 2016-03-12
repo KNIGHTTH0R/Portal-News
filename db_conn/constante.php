@@ -4,7 +4,7 @@
 	define('DB_HOST','localhost');
 	define('DB_USER','root');
 	define('DB_PASS','');
-	define('DB_NAME','online_shop_mysql');
+	define('DB_NAME','magazine');
 /*Database connection constants*/
        	
 ?>

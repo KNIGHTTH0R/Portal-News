@@ -5,7 +5,7 @@
 	$conn=mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME); // Main variable for connections to database
 	
 	if(!$conn){//if connection failed
-		die('Connection to database failed.');
+		die('Connection to database failed.'.$conn.'/');
 	//die function - exits from php script	
 	}
 	

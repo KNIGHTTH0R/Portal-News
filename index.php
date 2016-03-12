@@ -1,6 +1,7 @@
 
 <?php 
         include('includes/index_header.php');
+
 ?>
 
 <body id="page">
@@ -37,13 +38,13 @@
                         <a href="index.php">Home</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="about.php">About</a>
                     </li>
                     <li>
-                        <a href="blog.html">Blog</a>
+                        <a href="blog.php">Blog</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="contact.php">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -105,15 +106,31 @@
                 <div class="col-lg-12">
                     <hr>
                     <h2 class="intro-text text-center">Build a website
-                        <strong>worth visiting</strong>
+                        <strong><?php echo date("d-m-Y H:i:s"); ?></strong>
                     </h2>
                     <hr>
-                    <img class="img-responsive img-border img-left" src="img/intro-pic.jpg" alt="">
-                    <hr class="visible-xs">
-                    <p>The boxes used in this template are nested inbetween a normal Bootstrap row and the start of your column layout. The boxes will be full-width boxes, so if you want to make them smaller then you will need to customize.</p>
-                    <p>A huge thanks to <a href="http://join.deathtothestockphoto.com/" target="_blank">Death to the Stock Photo</a> for allowing us to use the beautiful photos that make this template really come to life. When using this template, make sure your photos are decent. Also make sure that the file size on your photos is kept to a minumum to keep load times to a minimum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                </div>
+                    <br>
+                    
+                    <?php
+                    
+    $query="SELECT * FROM news ORDER BY DATETIME DESC LIMIT 6";
+	$result=mysqli_query($conn,$query);//izvrsi upit
+	confirm_query($result);//potvrdi upit
+	if($result){
+	echo '<div class="row text-center">';
+		while($news=mysqli_fetch_assoc($result)){
+			echo '<div class="col-md-2">';
+			echo '<h4 class="news-title-2"><a href="index.php?id='.$news['id'].'">'.$news['title'].'</a></h4>';
+			echo '<img src="'.$news['img_src'].'" class="img-responsive img-circle">';
+			echo '<p class="text-justify">'.substr($news['content'],0,60).'...</p>';
+			echo '</div>';
+		}
+	echo '</div>';	
+	}
+                    
+                    ?>
+                    
+                    </div>
             </div>
         </div>
 
