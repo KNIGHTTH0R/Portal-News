@@ -36,7 +36,7 @@ body {
 }
 .cb-slideshow:after { 
     content: '';
-    background: transparent url(../images/pattern.png) repeat top left; 
+    /*background: transparent url(../images/pattern.png) repeat top left;*/ 
 }
 .cb-slideshow li span { 
     width: 100%;
@@ -44,7 +44,7 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
-    color: transparent;
+/*    color: transparent;*/
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: none;
@@ -65,7 +65,7 @@ body {
     width: 100%;
     text-align: center;
     opacity: 0;
-    color: #fff;
+    /*color: #fff;*/
     -webkit-animation: titleAnimation 36s linear infinite 0s;
     -moz-animation: titleAnimation 36s linear infinite 0s;
     -o-animation: titleAnimation 36s linear infinite 0s;
