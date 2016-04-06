@@ -1,5 +1,5 @@
 <?php
-
+//    Function for redirect
    function redirect($location){
        $output='<script>';
        $output=$output."windows.location.href='$location'";
@@ -7,17 +7,18 @@
     
        return $output;
    }
-
-    function confirm_query($result){
+   
+//   cofirm query function 
+function confirm_query($result){
         if(!$result){
             die('Query to database failed');
         }
     }
-
+//    get posts from DataBase
     function get_news($news_id){
         global $conn;
         
-        $query = "SELECT * FROM news WHERE id = '$news_id'";
+        $query = "SELECT * FROM posts WHERE id = '$news_id'";
         $result = mysqli_query($conn,$query);
         confirm_query($result);
         

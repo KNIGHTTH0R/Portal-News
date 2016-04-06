@@ -1,0 +1,14 @@
+!SESSION 2016-04-04 21:40:35.918 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.php.product -product org.eclipse.epp.package.php.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.php.product -data file:/C:/wamp64/www/Portal-news/ -product org.eclipse.epp.package.php.product
+
+!ENTRY com.tasktop.client.auth 2 0 2016-04-04 21:40:50.261
+!MESSAGE Reading license failed.
+!SUBENTRY 1 com.tasktop.client.auth 2 0 2016-04-04 21:40:50.261
+!MESSAGE Could not find or access license at C:\Users\Jarvic\AppData\Roaming\Tasktop.
+!SUBENTRY 1 com.tasktop.client.auth 2 0 2016-04-04 21:40:50.261
+!MESSAGE Could not find or access license anywhere.

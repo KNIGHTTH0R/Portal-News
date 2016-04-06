@@ -3,19 +3,20 @@
         include('includes/index_header.php');
 
 ?>
-
-<body id="page">
-        <ul class="cb-slideshow">
-            <li><span>Image 01</span></li>
-            <li><span>Image 02</span></li>
-            <li><span>Image 03</span></li>
-            <li><span>Image 04</span></li>
-            <li><span>Image 05</span></li>
-            <li><span>Image 06</span></li>
+ <ul class="cb-slideshow">
+            <li</li>
+             <li><span>Image 01</span><div><h3>  </h3></div></li>
+            <li><span>Image 02</span><div><h3>  </h3></div></li>
+            <li><span>Image 03</span><div><h3>  </h3></div></li>
+            <li><span>Image 04</span><div><h3>  </h3></div></li>
+            <li><span>Image 05</span><div><h3>  </h3></div></li>
+            <li><span>Image 06</span><div><h3>  </h3></div></li>
         </ul>
+<body id="page">
+       
 
-    <div class="brand">Magazine</div>
-    <div class="address-bar">Online newspaper</div>
+    <div class="brand">Business Casual</div>
+    <div class="address-bar"> Beverly Hills, CA 90210 | 123.456.7890</div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">
@@ -45,6 +46,9 @@
                     </li>
                     <li>
                         <a href="contact.php">Contact</a>
+                    </li>
+                    <li>
+                    <a href="#" class="login_btn">Login</a>
                     </li>
                 </ul>
             </div>
@@ -113,20 +117,20 @@
                     
                     <?php
                     
-    $query="SELECT * FROM news ORDER BY DATETIME DESC LIMIT 6";
-	$result=mysqli_query($conn,$query);//izvrsi upit
-	confirm_query($result);//potvrdi upit
-	if($result){
-	echo '<div class="row text-center">';
-		while($news=mysqli_fetch_assoc($result)){
-			echo '<div class="col-md-2">';
-			echo '<h4 class="news-title-2"><a href="index.php?id='.$news['id'].'">'.$news['title'].'</a></h4>';
-			echo '<img src="'.$news['img_src'].'" class="img-responsive img-circle">';
-			echo '<p class="text-justify">'.substr($news['content'],0,60).'...</p>';
-			echo '</div>';
-		}
-	echo '</div>';	
-	}
+				$query="SELECT * FROM posts ORDER BY DATETIME DESC LIMIT 6";
+				$result=mysqli_query($conn,$query);//izvrsi upit
+				confirm_query($result);//potvrdi upit
+				if($result){
+				echo '<div class="row text-center">';
+					while($news=mysqli_fetch_assoc($result)){
+						echo '<div class="col-md-2">';
+						echo '<h4 class="news-title-2"><a href="index.php?id='.$news['id'].'">'.$news['post_title'].'</a></h4>';
+						echo '<img src="'.$news['post_image'].'" class="img-responsive img-circle">';
+						echo '<p class="text-justify">'.substr($news['post_content'],0,60).'...</p>';
+						echo '</div>';
+					}
+				echo '</div>';	
+				}
                     
                     ?>
                     
